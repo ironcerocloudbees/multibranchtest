@@ -1,6 +1,4 @@
-pipeline{
-     agent any
-     stages{
+node{
           stage("1"){
                node{
                     wrap([$class: 'BuildUser']) {
@@ -12,5 +10,4 @@ pipeline{
                      }
                }
           }
-     }
 }
