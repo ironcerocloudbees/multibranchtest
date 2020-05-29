@@ -1,12 +1,13 @@
 node{
-    stages{
-        stage('Test'){
-            node(){
-                echo "masters"
+    steps{
+        stages{
+            stage('Test'){
+                node(){
+                    echo "masters"
+                }
+
             }
 
         }
-
     }
-
 }
