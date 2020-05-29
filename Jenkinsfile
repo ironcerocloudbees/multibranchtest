@@ -5,7 +5,9 @@ pipeline{
                node{
                     wrap([$class: 'BuildUser']) {
                        script {
-                         def environment = "officedepot"
+                            script{
+                              def environment = "officedepot"
+                            }
                        }
                      }
                }
