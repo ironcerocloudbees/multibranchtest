@@ -1,13 +1,12 @@
-node{
-          stage("1"){
-               node{
-                    wrap([$class: 'BuildUser']) {
-                       script {
-                            script{
-                              def environment = "officedepot"
-                            }
-                       }
-                     }
-               }
-          }
+pipeline{
+    agent any
+    stages{
+        stage('Test'){
+            steps{
+                echo "develop1"
+            }
+
+        }
+
+    }
 }
