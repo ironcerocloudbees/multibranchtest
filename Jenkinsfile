@@ -1,13 +1,7 @@
 node{
           stage("1"){
                node{
-                    wrap([$class: 'BuildUser']) {
-                       script {
-                            script{
-                              def environment = "officedepot"
-                            }
-                       }
-                     }
+                    checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], gitTool: 'Default', submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/ironcerocloudbees/multibranchtest.git']]])
                }
           }
 }
