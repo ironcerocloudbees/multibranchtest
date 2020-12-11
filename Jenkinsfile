@@ -1,7 +1,7 @@
 node{
           stage("1"){
                node{
-                    echo "Checkout phase 5"
+                    echo "Checkout phase 6"
                }
           }
 }
