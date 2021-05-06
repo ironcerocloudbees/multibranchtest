@@ -1,7 +1,16 @@
-node{
-          stage("1"){
-               node{
-                    echo "Checkout phase 6"
-               }
-          }
+@Library('multibranchlibrary') _
+
+pipeline {
+    agent any
+
+    stages {
+        stage('Hello') {
+            steps {
+                echo 'Hello World'
+                script{
+                    isBuildReplay()
+                }
+            }
+        }
+    }
 }
